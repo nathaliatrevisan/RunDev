@@ -1,6 +1,9 @@
-import React from 'react';
+// src/app/components/landingPage.tsx
 
-export default function Home() {
+import React from 'react';
+import Link from 'next/link'; // Importe o componente Link
+
+export default function LandingPage() {
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white font-mono overflow-hidden relative">
       {/* Background Grid - Efeito de grade sutil */}
@@ -17,24 +20,20 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <h1 className="text-2xl font-bold text-[#7534f3]">RunDev<span className="text-white">.</span></h1>
             <nav className="flex items-center gap-4">
-              <a
-                href="#"
-                className="px-4 py-2 text-sm rounded-lg border border-[#7534f3] text-[#7534f3] hover:bg-[#7534f3] hover:text-white transition-colors duration-300"
-              >
+              {/* Botão "Entrar" */}
+              <Link href="/auth" passHref className="px-4 py-2 text-sm rounded-lg border border-[#7534f3] text-[#7534f3] hover:bg-[#7534f3] hover:text-white transition-colors duration-300">
                 Entrar
-              </a>
-              <a
-                href="#"
-                className="px-4 py-2 text-sm rounded-lg bg-gradient-to-r from-[#7534f3] to-[#A05CFF] text-white font-semibold hover:from-[#622bc4] hover:to-[#8b49db] transition-colors duration-300"
-              >
+              </Link>
+              {/* Botão "Criar Conta" */}
+              <Link href="/auth" passHref className="px-4 py-2 text-sm rounded-lg bg-gradient-to-r from-[#7534f3] to-[#A05CFF] text-white font-semibold hover:from-[#622bc4] hover:to-[#8b49db] transition-colors duration-300">
                 Criar Conta
-              </a>
+              </Link>
             </nav>
           </div>
         </header>
 
         {/* Hero Section */}
-        <section className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-6 pt-40 gap-16">
+        <section className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-6 pt-24 pb-24 gap-16">
           {/* Texto e Call-to-action */}
           <div className="flex-1 text-center md:text-left">
             <h2 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
@@ -49,12 +48,10 @@ export default function Home() {
               Gerencie seus projetos, finanças e clientes de forma simples e eficiente,
               direto do seu terminal.
             </p>
-            <a
-              href="#"
-              className="inline-block px-8 py-4 rounded-lg bg-gradient-to-r from-[#7534f3] to-[#A05CFF] text-white font-semibold transition-transform duration-300 hover:scale-105 shadow-lg"
-            >
+            {/* Botão "Começar Agora" */}
+            <Link href="/auth" passHref className="inline-block px-8 py-4 rounded-lg bg-gradient-to-r from-[#7534f3] to-[#A05CFF] text-white font-semibold transition-transform duration-300 hover:scale-105 shadow-lg">
               Começar Agora
-            </a>
+            </Link>
           </div>
 
           {/* Mockup do Dashboard */}
